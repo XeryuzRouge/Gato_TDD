@@ -10,7 +10,7 @@ class Central
 
   def initialize
     @input = Input.new
-    @players_config = PlayersConfiguration.new(@input)
+    @players_config = PlayersConfiguration.new(["h", "c"])
     @interface = Interface.new
     @board_status = BoardStatus.new
   end

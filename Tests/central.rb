@@ -4,9 +4,9 @@ require_relative 'input'
 
 RSpec.describe Central, "#result" do 
 
-   it "Return true if enter key was pressed" do  
+   it "Should return h and c if human and computer selected" do  
       central = Central.new
-      expect(central.result).to eq "\r"
+      expect(central.main_menu).to eq "\r"
   end
  
 end

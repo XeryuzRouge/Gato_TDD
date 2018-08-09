@@ -8,11 +8,6 @@ class PlayersConfiguration
     input_not_recognized = MainMenuErrorsMessages.new
   end
 
-  def tries_counter
-    @tries_counter = @tries_counter + 1
-  end
-  end
-
   def input_player_filter(input)
     loop do 
       option_selected = input.gets.chomp 

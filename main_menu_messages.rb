@@ -1,7 +1,7 @@
 
 require_relative 'messages_repertory'
 
-class MainMenuErrorsMessages
+class MainMenuMessages
 
   attr_reader :msg
   attr_reader :tries_counter
@@ -9,6 +9,10 @@ class MainMenuErrorsMessages
   def initialize
     @msg = MessagesRepertory.new
     @tries_counter = 0
+  end
+
+  def input_request_message(player)
+    print "\n#{msg.human_or_cpu(player)}"
   end
 
   def error_message
@@ -22,6 +26,8 @@ class MainMenuErrorsMessages
       exit
     end
   end
+
+  private
 
   def minus_one_try
     @tries_counter += 1
